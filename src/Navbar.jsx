@@ -12,6 +12,12 @@ const Navbar = () => {
                         </h1>
                     </div>
                 </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="about.asp">About</a></li>
+                    <li><a href="projects.asp">Projects</a></li>
+                    <li><a href="contact.asp">Contact</a></li>
+                </ul>
             </nav>
         </header>
     );
