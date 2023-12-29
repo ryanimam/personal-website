@@ -1,0 +1,62 @@
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    font-size: 1.5rem;
+}
+
+#profilePhoto {
+    background: url("./20230911_160308-modified.png");
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+#logoLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+#githubLogo {
+    background: url("./github-mark.png");
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+#linkedInLogo {
+    background: url("./LI-In-Bug.png");
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 5rem;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 2rem;
+}

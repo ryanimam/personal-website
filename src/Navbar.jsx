@@ -6,11 +6,7 @@ const Navbar = () => {
         <header>       
             <nav id='navbar'>
                 <div id='navItems'>
-                    <div id='navName'>
-                        <h1>
-                            Ryan Imam
-                        </h1>
-                    </div>
+                    <div id='navName'>Ryan Imam</div>
                     <ul id="navLinks">
                         <li><a href="">Home</a></li>
                         <li><a href="about.asp">About</a></li>
