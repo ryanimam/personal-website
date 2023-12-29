@@ -1,0 +1,52 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+#navItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#navName {
+    margin: 10px;
+    width: fit-content;
+    color: black;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+#navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navLinks li {
+    list-style: none;
+    padding: 0 0px;
+    margin: 0 20px;
+    position: relative;
+}
+
+#navLinks li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-family: sans-serif;
+}
+
+#navLinks li a:hover::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css';
+import './Navbar.css';
 
 const Navbar = () => {
     return (
@@ -11,13 +11,14 @@ const Navbar = () => {
                             Ryan Imam
                         </h1>
                     </div>
+                    <ul id="navLinks">
+                        <li><a href="">Home</a></li>
+                        <li><a href="about.asp">About</a></li>
+                        <li><a href="projects.asp">Projects</a></li>
+                        <li><a href="projects.asp">Resume</a></li>
+                        <li><a href="contact.asp">Contact</a></li>
+                    </ul>
                 </div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="about.asp">About</a></li>
-                    <li><a href="projects.asp">Projects</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
-                </ul>
             </nav>
         </header>
     );

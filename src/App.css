@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url("../src/pexels-belle-co-783682.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
 .App-logo {
