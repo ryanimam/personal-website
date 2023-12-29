@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.7de465ed.css",
-    "main.js": "/personal-website/static/js/main.98c49e8f.js",
+    "main.css": "/personal-website/static/css/main.4ad8ad74.css",
+    "main.js": "/personal-website/static/js/main.2936fbc6.js",
     "static/js/787.0f15b36d.chunk.js": "/personal-website/static/js/787.0f15b36d.chunk.js",
-    "static/media/pexels-belle-co-783682.jpg": "/personal-website/static/media/pexels-belle-co-783682.5fae49d3304199a3262e.jpg",
+    "static/media/20230911_160308-modified.png": "/personal-website/static/media/20230911_160308-modified.49cde566997f52999e18.png",
     "index.html": "/personal-website/index.html",
-    "main.7de465ed.css.map": "/personal-website/static/css/main.7de465ed.css.map",
-    "main.98c49e8f.js.map": "/personal-website/static/js/main.98c49e8f.js.map",
+    "main.4ad8ad74.css.map": "/personal-website/static/css/main.4ad8ad74.css.map",
+    "main.2936fbc6.js.map": "/personal-website/static/js/main.2936fbc6.js.map",
     "787.0f15b36d.chunk.js.map": "/personal-website/static/js/787.0f15b36d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7de465ed.css",
-    "static/js/main.98c49e8f.js"
+    "static/css/main.4ad8ad74.css",
+    "static/js/main.2936fbc6.js"
   ]
 }
