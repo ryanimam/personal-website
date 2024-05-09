@@ -6,7 +6,7 @@ const HomePage = () => {
         <div className='description'>
             <div id='profilePhoto'></div>
             Hey, I'm
-            <h1>Ryan Imam</h1>
+            <div id='HomePageName'>Ryan Imam</div>
             <div id="logoLinks">
                 <div id='githubLogo'>
                     <a href="http://www.github.com/ryanimam" className="fill-div"/>

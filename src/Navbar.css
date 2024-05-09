@@ -17,7 +17,7 @@
     margin: 10px;
     width: fit-content;
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: "Poppins", sans-serif;
 }
 
@@ -37,7 +37,7 @@
 
 #navLinks li a{
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: black;
     font-family: "Poppins", sans-serif;
 }
