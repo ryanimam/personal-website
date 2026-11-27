@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan Imam</title>
+<meta name="description" content="Ryan Imam, software engineer at Telstra in Sydney. Backend microservices, APIs, distributed systems, reliability and AI engineering.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%230B5CAD'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;800&family=Red+Hat+Text:wght@400;500;600&display=swap">
+<style>
+/* VOICE   plain, specific, first person.
+   COLOUR+TYPE  light sky blue band, deep navy ink, one clear link blue; Red Hat Display/Text.
+   LAYOUT  light blue hero band (name, intro, actions, headshot), calm white sections, navy contact band. */
+:root{color-scheme:light dark;
+  --band:light-dark(#BFE1F8,#0E3355);--on-band:light-dark(#0B2540,#E6F1FA);
+  --bg:light-dark(#FFFFFF,#071A2E);--ink:light-dark(#0B2540,#E6F1FA);
+  --muted:light-dark(#44586B,#A8BED0);--link:light-dark(#0B5CAD,#8CC8F5);
+  --rule:light-dark(#D6E3EE,#1A3550);
+  --btn:light-dark(#0B2540,#BFE1F8);--on-btn:light-dark(#FFFFFF,#071A2E);
+  --foot:light-dark(#0B2540,#04111F);--on-foot:#E6F1FA;--foot-muted:#A8BED0;--foot-rule:#22405E;
+  --display:'Red Hat Display',system-ui,sans-serif}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'Red Hat Text',system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:12px;z-index:9;background:var(--bg);color:var(--ink);padding:10px 14px;border-radius:8px}
+.skip:focus{left:12px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:max(5vw,20px)}
+
+/* hero band */
+.hero{background:var(--band);color:var(--on-band)}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0 28px;padding-block:14px}
+.brand{font:700 20px/1 var(--display);color:inherit;text-decoration:none;padding:12px 0}
+.top nav{display:flex;flex-wrap:wrap;gap:0 24px}
+.top nav a{color:inherit;font-weight:600;font-size:15px;text-decoration:none;padding:12px 0}
+.top nav a:hover{text-decoration:underline}
+.hero-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 64px;padding-block:clamp(40px,6vw,72px) clamp(56px,8vw,88px)}
+.intro{flex:1 1 440px}
+h1{font:800 clamp(44px,6vw,72px)/1 var(--display);letter-spacing:-.025em;margin:0}
+.lede{font-size:21px;line-height:1.5;margin:20px 0 0;max-width:40ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 0}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:2px solid currentColor;border-radius:10px;color:inherit;font-weight:600;text-decoration:none;transition:background-color .15s,color .15s}
+.btn:hover{background:var(--on-band);color:var(--band)}
+.btn.primary{background:var(--btn);border-color:var(--btn);color:var(--on-btn)}
+.btn.primary:hover{background:var(--link);border-color:var(--link);color:var(--on-btn)}
+.avatar{flex:none;width:clamp(200px,24vw,288px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;border:6px solid var(--bg);box-shadow:0 18px 40px -18px rgba(11,37,64,.45);background:var(--bg)}
+
+/* sections */
+.sec{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:24px clamp(32px,5vw,80px);padding-block:clamp(56px,8vw,104px)}
+.sec+.sec{border-top:1px solid var(--rule)}
+h2{font:700 clamp(28px,3.4vw,40px)/1.08 var(--display);letter-spacing:-.015em;margin:0;text-wrap:balance}
+h3{font:700 22px/1.25 var(--display);margin:0}
+h4{font:600 17px/1.4 'Red Hat Text',system-ui,sans-serif;margin:0}
+.body{max-width:68ch}
+.body>p{margin:0 0 18px}.body>p:last-child{margin-bottom:0}
+.meta{color:var(--muted);font-size:15px;margin:4px 0 14px}
+.entry p:last-child{margin:0}
+.entry+.entry{margin-top:44px;padding-top:40px;border-top:1px solid var(--rule)}
+.role+.role{margin-top:24px}
+.skills{margin:0}
+.skills div{display:grid;grid-template-columns:minmax(0,12em) minmax(0,1fr);gap:4px 24px;padding:16px 0;border-top:1px solid var(--rule)}
+.skills div:last-child{border-bottom:1px solid var(--rule)}
+.skills dt{font-weight:600}.skills dd{margin:0;color:var(--muted)}
+.certs{list-style:none;margin:0;padding:0}
+.certs li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 24px;padding:12px 0;border-top:1px solid var(--rule)}
+.certs li:last-child{border-bottom:1px solid var(--rule)}
+.certs span{color:var(--muted);font-size:15px;white-space:nowrap}
+
+/* contact band */
+.contact{background:var(--foot);color:var(--on-foot);padding-block:clamp(88px,11vw,152px) 48px}
+.contact h2{font-size:clamp(36px,5.2vw,64px)}.contact h2 span{display:block}
+.links{list-style:none;margin:56px 0 0;padding:0}
+.links li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:4px clamp(32px,5vw,80px);padding:22px 0;border-top:1px solid var(--foot-rule);align-items:baseline}
+.links li:last-child{border-bottom:1px solid var(--foot-rule)}
+.links span{color:var(--foot-muted);font-size:17px}
+.links a{color:var(--on-foot);font-size:clamp(20px,2vw,24px);overflow-wrap:anywhere}
+.note{color:var(--foot-muted);font-size:15px;margin:16px 0 0}
+.fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:var(--foot-muted);font-size:15px;margin:96px 0 0}
+.fine a{color:var(--foot-muted)}
+
+@media (max-width:860px){
+  .sec{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .lede{font-size:19px}
+  .hero-grid{flex-direction:column;align-items:flex-start;gap:28px}
+  .intro{flex:none}
+  .avatar{order:-1;width:136px;border-width:4px}
+  .skills div,.links li{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero" id="top">
+  <div class="wrap top">
+    <a class="brand" href="#top">Ryan Imam</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="intro">
+      <h1>Ryan Imam</h1>
+      <p class="lede">Software engineer at Telstra in Sydney. I build backend microservices and APIs, and the tests that keep them reliable.</p>
+      <p class="ctas">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="#work">Read my experience</a>
+      </p>
+    </div>
+    <img class="avatar" src="ryan.jpg" width="600" height="600" alt="Ryan Imam">
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="sec" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">I find out why production breaks, then make it harder to break again.</h2>
+    <div class="body">
+      <p>At Telstra I work across a system of 90+ microservices. I build backend services in Java and Spring Boot, trace failures across service boundaries, and own the tests and CI/CD gates that every release passes through.</p>
+      <p>I've shipped critical production hotfixes for 20+ deep-link interfaces and led regression validation across 15+ release cycles, writing Playwright automation the team now uses as standard practice.</p>
+      <p>Lately I've been working with AI too: evaluating LLM output, and building an AI agent for an internal business problem at a Telstra hackathon. I'm most interested in AI-powered software that is reliable enough to run in production.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Experience</h2>
+    <div class="body">
+      <article class="entry">
+        <h3>Telstra</h3>
+        <p class="meta">Software Engineer. Full-time, hybrid. Sydney, February 2025 to present.</p>
+        <p>I build API-driven software for Telstra's wholesale and enterprise telecommunications platforms: backend Java services with Spring Boot, and frontend apps in Angular and TypeScript. I also own the security and quality gates in our CI/CD pipelines across 90+ microservices.</p>
+      </article>
+      <article class="entry">
+        <h3>DataAnnotation.tech</h3>
+        <p class="meta">AI Reviewer. March 2024 to February 2025.</p>
+        <p>I reviewed AI-generated code in Python, Java, C++, Swift and SQL for correctness and idiomatic style, including edge cases, memory management and algorithmic complexity, and gave structured feedback to improve LLM output quality.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="education" aria-labelledby="education-h">
+    <h2 id="education-h">Education</h2>
+    <div class="body">
+      <article class="entry">
+        <h3>UNSW Sydney</h3>
+        <p class="meta">Bachelor of Science (Computer Science). 2021 to 2024.</p>
+        <p>Software engineering, algorithm design, object-oriented programming, computer systems and networking, with practical full-stack development. Coursework included Computer Networks and Applications: TCP/IP, link-state and distance-vector routing, switching and sockets.</p>
+      </article>
+      <article class="entry">
+        <h3>Massachusetts Institute of Technology</h3>
+        <p class="meta">Professional Education, Enterprise Software Development with AI Agents. Non-degree, 12 weeks, April 2027.</p>
+        <p>Agentic AI, AI-native software engineering, enterprise system architecture and building reliable AI-powered software systems.</p>
+      </article>
+      <article class="entry">
+        <h3>Certifications</h3>
+        <ul class="certs">
+          <li>Microsoft Certified: Azure AI Fundamentals (AI-901) <span>December 2026</span></li>
+          <li>AWS Certified Cloud Practitioner <span>September 2026</span></li>
+          <li>Google IT Support Professional Certificate</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <div class="body">
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Java, Python, C, C++, JavaScript, TypeScript, SQL, Bash</dd></div>
+        <div><dt>Backend and distributed systems</dt><dd>Spring Boot, microservices, REST APIs, Apache Kafka, JSON Schema, event-driven architecture, caching, pagination</dd></div>
+        <div><dt>Frontend</dt><dd>React, Angular, HTML, CSS, WCAG accessibility</dd></div>
+        <div><dt>Cloud and infrastructure</dt><dd>AWS, Azure, Docker, Kubernetes, Linux and Unix</dd></div>
+        <div><dt>DevOps and security</dt><dd>Git, GitLab CI/CD, Veracode, Aqua Security, SonarQube, release management</dd></div>
+        <div><dt>Observability</dt><dd>New Relic, Splunk, production monitoring, incident management, root cause analysis</dd></div>
+        <div><dt>Testing and automation</dt><dd>Playwright, service virtualisation, regression testing, integration testing, API contract validation</dd></div>
+        <div><dt>AI</dt><dd>LLM evaluation, agentic AI workflows, GitHub Copilot, Gemini, Microsoft Copilot</dd></div>
+        <div><dt>Systems and networking</dt><dd>Operating systems, memory management, computer networking, Ethernet, fibre networks, telecommunications infrastructure</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="volunteering" aria-labelledby="volunteering-h">
+    <h2 id="volunteering-h">Volunteering</h2>
+    <div class="body">
+      <article class="entry">
+        <h3>Coastrek x Beyond Blue</h3>
+        <p class="meta">Event staff and participant. 2025 and 2026.</p>
+        <p>Charity fundraiser hikes supporting Beyond Blue.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2><span>Building backend or AI systems?</span> <span>I'd like to hear about it.</span></h2>
+    <ul class="links">
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ryanimam/">linkedin.com/in/ryanimam</a></li>
+      <li><span>Email</span><a href="mailto:ryanimam@hotmail.com">ryanimam@hotmail.com</a></li>
+      <li><span>GitHub</span><a href="https://github.com/ryanimam">github.com/ryanimam</a></li>
+    </ul>
+    <p class="fine"><span>© 2026 Ryan Imam</span><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+</body>
+</html>
