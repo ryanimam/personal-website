@@ -1,15 +1,23 @@
-# ryan-imam-site
+# Ryan Imam
 
-Personal website for Ryan Imam. One static `index.html` plus `ryan.jpg`, no build step.
+Personal website. Software engineer at Telstra, Sydney.
 
-## Deploy to Vercel
+[LinkedIn](https://www.linkedin.com/in/ryanimam/) · [GitHub](https://github.com/ryanimam) · [Email](mailto:ryanimam@hotmail.com)
 
-Vercel serves the folder as-is. Pick one:
+## Run locally
 
-- **CLI:** run `npx vercel` in this folder for a preview, then `npx vercel --prod` to go live.
-- **Dashboard:** push this folder to a GitHub repo, then go to vercel.com/new, import the repo and keep the "Other" framework preset with no build command.
-- **Claude:** with the Vercel plugin enabled, open this folder in Claude Code and run `/vercel:deploy prod`.
+```bash
+npx serve .
+```
 
-## Local preview
+Or just open `index.html` in a browser.
 
-Open `index.html` in a browser, or run `npx serve .`.
+## Deploy
+
+```bash
+npx vercel --prod
+```
+
+## Built with
+
+HTML and CSS. No framework, no build step.
